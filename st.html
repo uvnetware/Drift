@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair | Drift Hair Studio & Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #fff;
+            --secondary-color: #000;
+            --background-color: #000;
+            --text-color: #fff;
+            --accent-color: #FFD700;
+            --font-family-main: 'Montserrat', sans-serif;
+            --font-family-alt: 'Roboto', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family-main);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background: url('https://www.cliveclinics.co.nz/cdn/shop/files/Book_A_Consultation_image_1.png?v=1688939569&width=1440') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+            padding: 45px;
+            backdrop-filter: blur(3px);
+            max-width: 1000px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 21px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            gap: 21px;
+            text-align: left;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin: 12px 0;
+            position: relative;
+        }
+
+        select {
+            width: 100%;
+            padding: 21px;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--text-color);
+            border-radius: 12px;
+            font-size: 1.3rem;
+            outline: none;
+            box-shadow: inset 0 0 5px rgba(255, 165, 0, 0.3);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        select option {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        select:hover {
+            border-color: var(--accent-color);
+            box-shadow: inset 0 0 5px rgba(0, 188, 212, 0.3);
+        }
+
+        .question-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--primary-color);
+        }
+
+        .whatsapp-btn {
+            padding: 21px;
+            background: linear-gradient(115deg, var(--primary-color), #f5a623);
+            color: var(--background-color);
+            border: none;
+            border-radius: 15px;
+            font-size: 1.45rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 45px auto;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(115deg, #f5a623, var(--primary-color));
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            label {
+                font-size: 1.15rem;
+            }
+
+            .whatsapp-btn {
+                padding: 21px;
+                font-size: 1.15rem;
+            }
+
+            .question-image {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Drift Hair Studio</h1>
+        <p>Welcome to Drift Hair Studio & Academy. Fill out this test to discover the best treatment for your hair goals.</p>
+
+        <form id="hairGoalForm">
+            <label class="question-label" for="treatment-goal">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/number-circle-one-fill-512.png" class="question-image" alt="Treatment">Select any scalp repair treatment for?
+            </label>
+            <select id="treatment-goal" onchange="showBrandOptions()">
+                <option value="anti-hair-fall">Anti Hair-Fall</option>
+                <option value="control-dandruff">Control Dandruff</option>
+                <option value="healthy-scalp">Healthy Scalp</option>
+            </select>
+
+            <label class="question-label" for="dandruff">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/number-circle-two-fill-512.png" class="question-image" alt="Color">How would you describe the current level of dandruff you are experiencing?
+            </label>
+            <select id="dandruff">
+                <option value="none">None – No visible dandruff.</option>
+                <option value="mild">Mild – Small flakes occasionally present.</option>
+                <option value="moderate">Moderate – Noticeable flakes on the scalp and hair.</option>
+                <option value="severe">Severe – Large and frequent flakes, affecting scalp and shoulders.</option>
+                <option value="extreme">Extreme – Persistent and excessive dandruff with scalp irritation.</option>
+            </select>
+
+            <label class="question-label" for="hair-type">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/number-circle-three-fill-512.png" class="question-image" alt="Hair Type">Is your hair chemically treated or virgin?
+            </label>
+            <select id="hair-type">
+                <option value="chemically-treated">Chemically Treated</option>
+                <option value="virgin-hair">Virgin Hair</option>
+            </select>
+
+            <label class="question-label" for="itching">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/number-circle-four-fill-512.png" class="question-image" alt="Brands">Do you experience itching problems?
+            </label>
+            <select id="itching">
+                <option value="yes">YES</option>
+                <option value="no">NO</option>
+                <option value="never">Never</option>
+                <option value="sometimes">Sometimes</option>
+            </select>
+
+            <label class="question-label" for="budget">
+                <img src="https://cdn0.iconfinder.com/data/icons/phosphor-fill-vol-3/256/number-circle-five-fill-512.png" class="question-image" alt="Hair Length">What is your budget for the selected treatment?
+            </label>
+            <select id="budget">
+                <option value="basic">₹1499</option>
+                <option value="pro">₹1999</option>
+            </select>
+        </form>
+
+       <a id="whatsapp-link" href="#" class="whatsapp-btn" onclick="submitForm()">Book Appointment on WhatsApp</a>
+
+        <footer>© 2024 Drift Hair Studio & Academy. All Rights Reserved.</footer>
+    </div>
+
+    <script>
+
+        function submitForm() {
+            const treatmentGoal = document.getElementById("treatment-goal").value;
+            const dandruff = document.getElementById("dandruff").value;
+            const hairType = document.getElementById("hair-type").value;
+            const itching = document.getElementById("itching").value;
+            const budget = document.getElementById("budget").value;
+            
+            const message = `Drift Hair Studio Vadodara - Request APNMT:\nTreatment: ${treatmentGoal}\nDandruff: ${dandruff}\nHair Type: ${hairType}\nItching: ${itching}\nBudget: ₹${getPrice(budget)}\nEmail: \nName: `;
+            
+            const encodedMessage = encodeURIComponent(message);
+
+            const whatsappURL = `https://wa.me/916352371064?text=${encodedMessage}`;
+            
+            document.getElementById('whatsapp-link').href = whatsappURL;
+            alert(`Drift Hair Studio Vadodara - Request APNMT:
+Treatment: ${treatmentGoal}
+Dandruff: ${dandruff}
+Hair Type: ${hairType}
+Itching: ${itching}
+Budget: ₹${getPrice(budget)}
+Email:  
+Name: `);
+        }
+
+        function getPrice(length) {
+            switch (length) {
+                case 'basic':
+                    return 1499;
+                case 'pro':
+                    return 1999;
+                default:
+                    return 'naN';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
