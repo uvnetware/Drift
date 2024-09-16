@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladies Salon - Drift Hair Studio & Academy</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Animate.css for Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #333;
+        }
+
+        /* Golden Header */
+        header {
+            background: linear-gradient(45deg, #ffdf00, #ffa600);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            font-family: 'Cursive', serif;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #f2f2f2;
+        }
+
+        /* Golden Cards */
+        .service-cards {
+            margin-top: 3rem;
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            background-color: #fff9e6;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #6b4700;
+        }
+
+        .card-title {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: #d4a017;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            color: #6b4700;
+        }
+
+        .book-now {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            margin-top: 1rem;
+            background-color: #d4a017;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now:hover {
+            background-color: #b08907;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: #d4a017;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #d4a017;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Cards */
+        @media only screen and (max-width: 768px) {
+            .card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="text-white animate__animated animate__fadeInDown">
+    <h1>Drift Hair Studio & Academy</h1>
+    <p>Exclusive Ladies Salon and Beauty Care Hub Vadodara - 6352371064</p>
+</header>
+
+<!-- Service Cards Section -->
+<div class="container service-cards">
+    <div class="row gy-4">
+        <!-- Keratin Treatment Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-464575644-1595615606.jpg" alt="Keratin Treatment">
+                <div class="card-content">
+                    <h2 class="card-title">Keratin Treatment</h2>
+                    <p class="card-desc">Smooth, shiny, and strong hair with our premium keratin treatment.</p>
+                    <a href="/krtn" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smoothing Treatment Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-water"></i>
+                </div>
+                <img src="https://www.mygreentrends.in/wp-content/uploads/2020/09/green-trends-Blog-Straightening-Keratin.-1.jpg" alt="Smoothing Treatment">
+                <div class="card-content">
+                    <h2 class="card-title">Smoothing Treatment</h2>
+                    <p class="card-desc">Get silky smooth hair with a luxurious treatment.</p>
+                    <a href="/sso" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Straightening Treatment Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-thermometer-full"></i>
+                </div>
+                <img src="https://www.biolage.com/-/media/Project/Biolage/Biolagecom/Images/Blogs/Main-1600x1120/keratin-hair-system-for-damaged-hair.jpg?h=1120&w=1600&hash=D2E39BE4BA40B7D0D5D5D5C79EA8815E" alt="Straightening Treatment">
+                <div class="card-content">
+                    <h2 class="card-title">Straightening Treatment</h2>
+                    <p class="card-desc">Perfectly straight hair with advanced straightening techniques.</p>
+                    <a href="/sso" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hair Fall Control Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <img src="https://www.clinikally.com/cdn/shop/articles/Redensyl_for_Hair_The_Science_Behind_Hair_Growth_and_Loss_banner_image.png?v=1674567287&width=1500" alt="Hair Fall Control">
+                <div class="card-content">
+                    <h2 class="card-title">Hair Fall Control</h2>
+                    <p class="card-desc">Protect and nourish your hair to prevent hair fall.</p>
+                    <a href="/st" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dandruff Control Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <img src="https://vitalsklinic.com/wp-content/uploads/2022/09/istockphoto-1373233769-1024x1024-transformed.jpeg" alt="Dandruff Control">
+                <div class="card-content">
+                    <h2 class="card-title">Dandruff Control</h2>
+                    <p class="card-desc">Effective solutions to remove dandruff and keep your scalp healthy.</p>
+                    <a href="/st" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oleoshape Treatment Card -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+                <div class="card-icons">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <img src="https://t4.ftcdn.net/jpg/04/67/57/35/360_F_467573593_CNk8HmXvfvdiWpS0RadRtAuawaYmfk5q.jpg" alt="Oleoshape Treatment">
+                <div class="card-content">
+                    <h2 class="card-title">Oleoshape Treatment</h2>
+                    <p class="card-desc">Shape and define your hair naturally with our oleoshape treatment.</p>
+                    <a href="/sso" class="book-now">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>Drift Hair Studio | <a href="https://www.instagram.com/drifthairstudioandacademy/">Visit Instagram</a></p>
+</footer>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- Initialize AOS -->
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
 
